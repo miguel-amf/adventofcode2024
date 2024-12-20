@@ -7,7 +7,7 @@ public class MainClass {
     public static void main(String[] args) {
         Quiz1 q1 = new Quiz1();
         Quiz2 q2 = new Quiz2();
-        System.out.println("Result of quiz 1: " + q1.solveIt());
-        System.out.println("Result of quiz 1: " + q2.solveIt());
+        System.out.println("Result of quiz 1(Part1): " + q1.solveIt());
+        System.out.println("Result of quiz 2(Part1): " + q2.solveItPart1());
     }
 }

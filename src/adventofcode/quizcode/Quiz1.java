@@ -14,10 +14,11 @@ public class Quiz1 {
         List<String> lines;
         List<Integer> firstList = new ArrayList<Integer>();
         List<Integer> secondList = new ArrayList<Integer>();
+        //create and feed quiztools with the file name
         QuizTools quizTools = new QuizTools("input1.txt");
         long result = 0;
 
-
+        //get the lines as string
         lines = quizTools.getLines();
         //populate the arrays with respective numbers
         for (String line : lines) {
