@@ -14,15 +14,11 @@ public class Quiz1 {
         List<String> lines;
         List<Integer> firstList = new ArrayList<Integer>();
         List<Integer> secondList = new ArrayList<Integer>();
+        QuizTools quizTools = new QuizTools("input1.txt");
         long result = 0;
 
-        //open file
-        try {
-            lines = Files.readAllLines(Paths.get("src/adventofcode/quizcode/res/input1.txt"));
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        lines = quizTools.getLines();
         //populate the arrays with respective numbers
         for (String line : lines) {
             //extract numbers from each line, they seem to be separated by some spaces, don't know how many
