@@ -14,13 +14,15 @@ public class Quiz2 {
         QuizTools quizTools = new QuizTools("input2.txt");
         lines = quizTools.getLines();
         long safeCount = 0;
-        int lineCnt = 0;
 
         //each line represents a report. iterating over each.
         for(String report : lines) {
             boolean result = checkLine(report);
             if(result) {
                 safeCount++;
+            }
+            else {
+                //todo
             }
         }
 
@@ -53,11 +55,22 @@ public class Quiz2 {
                     (direction == -1 && current <= next)        ||  // Descending violation (or equals)
                     (Math.abs(current - next) > 3))               // Difference too large
             {
-                //System.out.println("UNSAFE");
+                //unsafe
                 return false;
             }
         }
-        //fallback return
+        //safe
         return true;
+    }
+
+    private ArrayList<Integer> stringToIntArray(String input) {
+        ArrayList<Integer> output = new ArrayList<Integer>();
+        String[] values = input.split("\\s+");
+        for (String value : values) {
+            //convert string to int
+            output.add(parseInt(value));
+
+        }
+        return output;
     }
 }
