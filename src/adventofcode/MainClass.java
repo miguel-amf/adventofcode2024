@@ -9,5 +9,6 @@ public class MainClass {
         Quiz2 q2 = new Quiz2();
         System.out.println("Result of quiz 1(Part1): " + q1.solveIt());
         System.out.println("Result of quiz 2(Part1): " + q2.solveItPart1());
+        System.out.println("Result of quiz 2(Part1): " + q2.solveItPart2());
     }
 }
