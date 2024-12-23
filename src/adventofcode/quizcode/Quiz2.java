@@ -17,12 +17,10 @@ public class Quiz2 {
 
         //each line represents a report. iterating over each.
         for(String report : lines) {
+
             boolean result = checkLine(report);
             if(result) {
                 safeCount++;
-            }
-            else {
-                //todo
             }
         }
 
