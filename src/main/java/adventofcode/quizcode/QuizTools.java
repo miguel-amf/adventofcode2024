@@ -18,7 +18,7 @@ public class QuizTools {
     //constructor, assume folder structure src/adventofcode/quizcode/res/
     public QuizTools(String filename) {
         //transforms file name to path
-        Path path = Paths.get("src/adventofcode/quizcode/res/" + filename);
+        Path path = Paths.get("src/main/java/adventofcode/quizcode/res/" + filename);
         //call fileToStringList
         fileToStringList(path);
 
