@@ -5,14 +5,14 @@ import java.util.List;
 
 public class Quiz1 {
 
-    public long solveIt() {
+    public long solveIt(String filename) {
 
         //declaring variables
         List<String> lines;
         List<Integer> firstList = new ArrayList<Integer>();
         List<Integer> secondList = new ArrayList<Integer>();
         //create and feed quiztools with the file name
-        QuizTools quizTools = new QuizTools("input1.txt");
+        QuizTools quizTools = new QuizTools(filename);
         long result = 0;
 
         //get the lines as string

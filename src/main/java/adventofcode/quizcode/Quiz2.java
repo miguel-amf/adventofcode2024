@@ -7,11 +7,11 @@ import static java.lang.Integer.parseInt;
 
 public class Quiz2 {
 
-    public long solveItPart1() {
+    public long solveItPart1(String filename) {
 
         //declaring and initializing variables
         List<String> lines;
-        QuizTools quizTools = new QuizTools("input2.txt");
+        QuizTools quizTools = new QuizTools(filename);
         lines = quizTools.getLines();
         long safeCount = 0;
 
@@ -29,11 +29,11 @@ public class Quiz2 {
         return safeCount;
     }
 
-    public long solveItPart2() {
+    public long solveItPart2(String filename) {
 
         //declaring and initializing variables
         List<String> lines;
-        QuizTools quizTools = new QuizTools("input2.txt");
+        QuizTools quizTools = new QuizTools(filename);
         lines = quizTools.getLines();
         long safeCount = 0;
 
