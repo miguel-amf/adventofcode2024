@@ -5,9 +5,10 @@ import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
-public class Quiz2 {
+public class Quiz2 implements Quiz{
 
-    public long solveItPart1(String filename) {
+    @Override
+    public long solvePart1(String filename) {
 
         //declaring and initializing variables
         List<String> lines;
@@ -29,7 +30,8 @@ public class Quiz2 {
         return safeCount;
     }
 
-    public long solveItPart2(String filename) {
+    @Override
+    public long solvePart2(String filename) {
 
         //declaring and initializing variables
         List<String> lines;

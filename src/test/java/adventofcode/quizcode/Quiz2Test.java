@@ -9,13 +9,13 @@ class Quiz2Test {
     @Test
     void solveIt_givenExampleInput_part1() {
         Quiz2 quiz = new Quiz2();
-        long result = quiz.solveItPart1("input2.txt");
+        long result = quiz.solvePart1("input2.txt");
         assertEquals(2, result);
     }
     @Test
     void solveIt_givenExampleInput_part2() {
         Quiz2 quiz = new Quiz2();
-        long result = quiz.solveItPart2("input2.txt");
+        long result = quiz.solvePart2("input2.txt");
         assertEquals(4, result);
     }
 

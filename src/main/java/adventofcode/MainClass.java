@@ -1,14 +1,23 @@
 package adventofcode;
 
-import adventofcode.quizcode.Quiz1;
-import adventofcode.quizcode.Quiz2;
+import adventofcode.quizcode.Quiz;
 
 public class MainClass {
     public static void main(String[] args) {
-        Quiz1 q1 = new Quiz1();
-        Quiz2 q2 = new Quiz2();
-        System.out.println("Result of quiz 1(Part1): " + q1.solveIt("input1.txt"));
-        System.out.println("Result of quiz 2(Part1): " + q2.solveItPart1("input2.txt"));
-        System.out.println("Result of quiz 2(Part1): " + q2.solveItPart2("input2.txt"));
+        for (int i = 1; i <= 25; i++) {
+            Quiz quiz = createQuiz(i);
+            String input = "input" + i + ".txt";
+            System.out.printf("Result of quiz %d(Part1): %s%n", i, quiz.solvePart1(input));
+            System.out.printf("Result of quiz %d(Part2): %s%n", i, quiz.solvePart2(input));
+        }
+    }
+
+    //to avoid a long list 1 to 25, instantiate quizzes objects using the file naming convention
+    private static Quiz createQuiz(int number) {
+        try {
+            return (Quiz) Class.forName("Quiz" + number).getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to create Quiz" + number, e);
+        }
     }
 }

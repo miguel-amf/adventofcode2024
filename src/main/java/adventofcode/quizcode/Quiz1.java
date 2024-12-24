@@ -3,9 +3,10 @@ package adventofcode.quizcode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Quiz1 {
+public class Quiz1 implements Quiz {
 
-    public long solveIt(String filename) {
+        @Override
+        public long solvePart1(String filename) {
 
         //declaring variables
         List<String> lines;
@@ -40,4 +41,12 @@ public class Quiz1 {
         }
         return result;
     }
+
+    @Override
+    public long solvePart2(String input) {
+        //not implemented
+        return -1;
+    }
+
+
 }
