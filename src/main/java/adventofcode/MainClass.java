@@ -1,4 +1,4 @@
-package adventofcode;
+package main.adventofcode;
 
 import adventofcode.quizcode.Quiz1;
 import adventofcode.quizcode.Quiz2;

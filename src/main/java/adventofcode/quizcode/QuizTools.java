@@ -1,10 +1,14 @@
-package adventofcode.quizcode;
+package main.adventofcode.quizcode;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class QuizTools {
 
@@ -17,10 +21,22 @@ public class QuizTools {
 
     //constructor, assume folder structure src/adventofcode/quizcode/res/
     public QuizTools(String filename) {
-        //transforms file name to path
-        Path path = Paths.get("src/main/java/adventofcode/quizcode/res/" + filename);
+        InputStream inputStream = getClass().getResourceAsStream("/resources/res/" + filename);
+        if (inputStream == null) {
+            throw new IllegalArgumentException("File Not Found: " + filename);
+        }
+        try {
+            lines = new BufferedReader(new InputStreamReader(inputStream))
+                    .lines()
+                    .collect(Collectors.toList());
+            // Use your lines here
+        } catch (Exception e) {
+            throw new RuntimeException("Error reading file: " + filename, e);
+        }
+        /*//transforms file name to path
+        Path path = Paths.get("/adventofcode/resources/" + filename);
         //call fileToStringList
-        fileToStringList(path);
+        fileToStringList(path);*/
 
     }
 

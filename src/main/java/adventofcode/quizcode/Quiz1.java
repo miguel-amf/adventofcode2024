@@ -1,4 +1,4 @@
-package adventofcode.quizcode;
+package main.adventofcode.quizcode;
 
 import java.util.ArrayList;
 import java.util.List;
