@@ -17,6 +17,6 @@ class Quiz3Test {
     void solveIt_givenExampleInput_part2() {
         Quiz3 quiz = new Quiz3();
         long result = quiz.solvePart2("input3.txt");
-        assertEquals(0, result);
+        assertEquals(48, result);
     }
 }
