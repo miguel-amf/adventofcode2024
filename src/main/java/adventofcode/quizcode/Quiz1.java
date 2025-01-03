@@ -12,12 +12,10 @@ public class Quiz1 implements Quiz {
         List<String> lines;
         List<Integer> firstList = new ArrayList<Integer>();
         List<Integer> secondList = new ArrayList<Integer>();
-        //create and feed quiztools with the file name
-        QuizTools quizTools = new QuizTools(filename);
         long result = 0;
 
         //get the lines as string
-        lines = quizTools.getLines();
+        lines = getLines(filename);
         //populate the arrays with respective numbers
         for (String line : lines) {
             //extract numbers from each line, they seem to be separated by some spaces, don't know how many

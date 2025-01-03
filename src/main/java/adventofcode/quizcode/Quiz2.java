@@ -12,13 +12,11 @@ public class Quiz2 implements Quiz{
 
         //declaring and initializing variables
         List<String> lines;
-        QuizTools quizTools = new QuizTools(filename);
-        lines = quizTools.getLines();
+        lines = getLines(filename);
         long safeCount = 0;
 
         //each line represents a report. iterating over each.
         for(String report : lines) {
-            ArrayList<Integer> intReport = stringToIntArray(report);
             ArrayList<Integer> currentAttempt = stringToIntArray(report);
 
             boolean result = checkLine(currentAttempt);
@@ -35,8 +33,7 @@ public class Quiz2 implements Quiz{
 
         //declaring and initializing variables
         List<String> lines;
-        QuizTools quizTools = new QuizTools(filename);
-        lines = quizTools.getLines();
+        lines = getLines(filename);
         long safeCount = 0;
 
         //each line represents a report. iterating over each.

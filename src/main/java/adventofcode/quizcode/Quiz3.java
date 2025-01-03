@@ -18,8 +18,7 @@ public class Quiz3 implements Quiz{
 
         //declaring and initializing variables
         List<String> lines;
-        QuizTools quizTools = new QuizTools(filename);
-        lines = quizTools.getLines();
+        lines = getLines(filename);
         long result = 0;
 
 
@@ -41,8 +40,7 @@ public class Quiz3 implements Quiz{
     public long solvePart2(String filename) {
         //declaring and initializing variables
         List<String> lines;
-        QuizTools quizTools = new QuizTools(filename);
-        lines = quizTools.getLines();
+        lines = getLines(filename);
         long result = 0;
         boolean doEnabled = true;
 
