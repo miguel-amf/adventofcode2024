@@ -74,10 +74,13 @@ public class Quiz2 implements Quiz{
             //convert the number and next one to be compared
             int current = line.get(i);
             int next = line.get(i+1);
-            //checks for the 4 unsafe scenarios: breaking
-            if ((direction == 1 && current >= next)         ||  // Ascending violation (or equals)
-                    (direction == -1 && current <= next)        ||  // Descending violation (or equals)
-                    (Math.abs(current - next) > 3))               // Difference too large
+            //checks for the possible unsafe scenarios:
+            //1. breaking the asc/desc pattern
+            //2. equal numbers in sequence
+            //3. difference too big
+            if ((direction == 1 && current >= next)             ||
+                    (direction == -1 && current <= next)        ||
+                    (Math.abs(current - next) > 3))
             {
                 //unsafe
                 return false;

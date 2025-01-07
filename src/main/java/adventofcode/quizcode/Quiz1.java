@@ -23,7 +23,6 @@ public class Quiz1 implements Quiz {
 
             firstList.add(Integer.parseInt(numbers[0]));
             secondList.add(Integer.parseInt(numbers[1]));
-            //System.out.println(firstList.getLast() + ", " + secondList.getLast());
         }
         //sort each, ascending (null defaults to ascending)
         firstList.sort(null);
