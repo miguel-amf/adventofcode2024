@@ -10,7 +10,7 @@ class Quiz4Test {
     void solvePart1() {
         Quiz4 quiz = new Quiz4();
         long result = quiz.solvePart1("input4.txt");
-        assertEquals(7, result);
+        assertEquals(18, result);
     }
 
     @Test
@@ -18,5 +18,11 @@ class Quiz4Test {
         Quiz4 quiz = new Quiz4();
         long result = quiz.solvePart2("input4.txt");
         assertEquals(0, result);
+    }
+    @Test
+    void debuggingPart1() {
+        Quiz4 quiz = new Quiz4();
+        long result = quiz.solvePart1("temp.txt");
+        assertEquals(1, result);
     }
 }
