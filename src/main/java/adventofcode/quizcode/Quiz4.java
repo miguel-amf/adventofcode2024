@@ -9,7 +9,7 @@ public class Quiz4 implements Quiz{
         //declaring and initializing variables
         List<String> lines;
         lines = getLines(filename);
-        long xmasCount = 0;
+        long xmasCount = 0, horizontal = 0, vertical = 0;
 
         //from the line, go over each character and check if it is X.
         //if so, check for any nearby M, and so on, until it finds XMAS
@@ -17,14 +17,15 @@ public class Quiz4 implements Quiz{
         //the character being tested (aka column) is represented by j
         for(int i = 0; i< lines.size(); i++) {
             for(int j = 0; j<lines.get(i).length();j++) {
-                //System.out.println("TESTING I J:" + i + j);
                 if(lines.get(i).charAt(j) == 'X') {
-                    //System.out.println("GOT INSIDE IF");
-                    xmasCount = xmasCount + checkHorizontal(lines, i, j);
-                    xmasCount = xmasCount + checkVertical(lines, i, j);
+                    xmasCount += checkHorizontal(lines, i, j);
+                    horizontal += checkHorizontal(lines, i, j);
+                    xmasCount += checkVertical(lines, i, j);
+                    vertical += checkVertical(lines, i, j);
                 }
             }
         }
+        System.out.println("ho: " + horizontal + " ver: " + vertical);
         return xmasCount;
     }
 
@@ -54,9 +55,6 @@ public class Quiz4 implements Quiz{
             if(lines.get(i).substring(j-4,j).equals(("SAMX"))) {
                 count++;
             }
-        }
-        if(count!=0) {
-            System.out.println("Returning: " + count);
         }
         return count;
     }
