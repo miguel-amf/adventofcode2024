@@ -42,7 +42,6 @@ public class Quiz4 implements Quiz{
     private int checkHorizontal(List<String> lines, int i, int j) {
         int count = 0;
         //this could be achieved by going for sub
-        //System.out.println("Start testing for: " + lines.get(i).substring(j) +" length: " + lines.get(i).length() + " j value: " + j);
         //first, check if there is enough space for forward xmas, given j position
         if(j<(lines.get(i).length()-3)) {
             if(lines.get(i).substring(j,j+4).equals(("XMAS")))  {
@@ -50,9 +49,7 @@ public class Quiz4 implements Quiz{
             }
         }
         //check if there is enough space for backwards xmas (samx), given j position
-        //System.out.println("BACK TEST:");
         if(j>=4) {
-            //System.out.println("BACKWARDS: i "+ i + " j " + j + "String to be checked: " + lines.get(i).substring(j-4,j));
             if(lines.get(i).substring(j-4,j).equals(("SAMX"))) {
                 count++;
             }
